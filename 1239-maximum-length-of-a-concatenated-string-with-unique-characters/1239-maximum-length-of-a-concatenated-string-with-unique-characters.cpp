@@ -1,37 +1,38 @@
-
 class Solution {
 public:
     int maxLength(const std::vector<std::string>& arr) {
         int result = 0;
-        std::vector<std::unordered_set<char>> uniqueSets = {{}};
+        std::vector<std::bitset<26>> charOccurrences = {std::bitset<26>()};
 
         for (const std::string& s : arr) {
-            std::unordered_set<char> currentSet;
+            std::bitset<26> currentSet;
 
             // Check if the characters in the current string are unique
             bool isUnique = true;
             for (char ch : s) {
-                if (currentSet.count(ch) > 0) {
+                int index = ch - 'a';
+
+                if (currentSet.test(index)) {
                     isUnique = false;
                     break;
                 }
-                currentSet.insert(ch);
+
+                currentSet.set(index);
             }
 
             if (isUnique) {
                 // Only consider strings with unique characters
-                std::vector<std::unordered_set<char>> newSets;
-                for (const auto& charSet : uniqueSets) {
+                std::vector<std::bitset<26>> newSets;
+                for (const auto& charSet : charOccurrences) {
                     // Check if the characters in the current string are also unique to the existing sets
-                    std::unordered_set<char> combinedSet = charSet;
-                    combinedSet.insert(currentSet.begin(), currentSet.end());
+                    std::bitset<26> combinedSet = charSet | currentSet;
 
-                    if (combinedSet.size() == charSet.size() + currentSet.size()) {
+                    if (combinedSet.count() == charSet.count() + currentSet.count()) {
                         newSets.push_back(combinedSet);
-                        result = std::max(result, static_cast<int>(combinedSet.size()));
+                        result = std::max(result, static_cast<int>(combinedSet.count()));
                     }
                 }
-                uniqueSets.insert(uniqueSets.end(), newSets.begin(), newSets.end());
+                charOccurrences.insert(charOccurrences.end(), newSets.begin(), newSets.end());
             }
         }
 
