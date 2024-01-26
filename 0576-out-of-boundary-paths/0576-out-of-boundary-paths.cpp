@@ -2,33 +2,37 @@ class Solution {
 public:
     int findPaths(int m, int n, int maxMove, int startRow, int startColumn) {
         const int MOD = 1e9 + 7;
-        vector<vector<int>> dp1(m, vector<int>(n, 0));
-        vector<vector<int>> dp2(m, vector<int>(n, 0));
+        unordered_map<long long, int> memo;
 
-        vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        return dfs(m, n, maxMove, startRow, startColumn, memo, MOD);
+    }
 
-        for (int move = 1; move <= maxMove; ++move) {
-            vector<vector<int>>& current = (move % 2 == 1) ? dp1 : dp2;
-            vector<vector<int>>& previous = (move % 2 == 0) ? dp1 : dp2;
-
-            for (int i = 0; i < m; ++i) {
-                for (int j = 0; j < n; ++j) {
-                    current[i][j] = 0;  // Reset the current value
-
-                    for (const auto& direction : directions) {
-                        int ni = i + direction.first;
-                        int nj = j + direction.second;
-
-                        if (ni < 0 || ni >= m || nj < 0 || nj >= n) {
-                            current[i][j] = (current[i][j] + 1) % MOD;
-                        } else {
-                            current[i][j] = (current[i][j] + previous[ni][nj]) % MOD;
-                        }
-                    }
-                }
-            }
+private:
+    int dfs(int m, int n, int maxMove, int i, int j, unordered_map<long long, int>& memo, const int MOD) {
+        if (i < 0 || i >= m || j < 0 || j >= n) {
+            return 1;  // Out of boundary
         }
 
-        return (maxMove % 2 == 1) ? dp1[startRow][startColumn] : dp2[startRow][startColumn];
+        if (maxMove == 0) {
+            return 0;  // No more moves allowed
+        }
+
+        long long key = ((long long)i << 32) | ((long long)j << 16) | maxMove;
+        if (memo.find(key) != memo.end()) {
+            return memo[key];
+        }
+
+        vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        int result = 0;
+
+        for (const auto& direction : directions) {
+            int ni = i + direction.first;
+            int nj = j + direction.second;
+
+            result = (result + dfs(m, n, maxMove - 1, ni, nj, memo, MOD)) % MOD;
+        }
+
+        memo[key] = result;
+        return result;
     }
 };
