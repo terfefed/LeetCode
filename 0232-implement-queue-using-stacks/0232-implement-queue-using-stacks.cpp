@@ -1,6 +1,6 @@
 class MyQueue {
     private:
-    std::vector<int> xyz;
+    vector<int> xyz;
 public:
     MyQueue() {
         
