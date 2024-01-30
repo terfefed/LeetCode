@@ -9,18 +9,16 @@ public:
                 operands.pop();
                 int operand1 = operands.top();
                 operands.pop();
-int result;
-                if (token == "+") {
-                    result = operand1 + operand2;
-                } else if (token == "-") {
-                    result = operand1 - operand2;
-                } else if (token == "*") {
-                    result = operand1 * operand2;
-                } else if (token == "/") {
-                    result = operand1 / operand2;
-                }
 
-                operands.push(result);
+                if (token == "+") {
+                    operands.push(operand1 + operand2);
+                } else if (token == "-") {
+                    operands.push(operand1 - operand2);
+                } else if (token == "*") {
+                    operands.push(operand1 * operand2);
+                } else if (token == "/") {
+                    operands.push(operand1 / operand2);
+                }
             } else {
                 operands.push(std::stoi(token));
             }
