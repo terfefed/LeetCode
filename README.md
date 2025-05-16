@@ -32,4 +32,20 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/terfefed/LeetCode/tree/master/0014-longest-common-prefix) |
+## Tree
+|  |
+| ------- |
+| [0099-recover-binary-search-tree](https://github.com/terfefed/LeetCode/tree/master/0099-recover-binary-search-tree) |
+## Depth-First Search
+|  |
+| ------- |
+| [0099-recover-binary-search-tree](https://github.com/terfefed/LeetCode/tree/master/0099-recover-binary-search-tree) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0099-recover-binary-search-tree](https://github.com/terfefed/LeetCode/tree/master/0099-recover-binary-search-tree) |
+## Binary Tree
+|  |
+| ------- |
+| [0099-recover-binary-search-tree](https://github.com/terfefed/LeetCode/tree/master/0099-recover-binary-search-tree) |
 <!---LeetCode Topics End-->
