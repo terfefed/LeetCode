@@ -10,6 +10,7 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/terfefed/LeetCode/tree/master/0013-roman-to-integer) |
+| [0014-longest-common-prefix](https://github.com/terfefed/LeetCode/tree/master/0014-longest-common-prefix) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/terfefed/LeetCode/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Dynamic Programming
 |  |
@@ -27,4 +28,8 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/terfefed/LeetCode/tree/master/0013-roman-to-integer) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/terfefed/LeetCode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
