@@ -10,6 +10,7 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/terfefed/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0005-longest-palindromic-substring](https://github.com/terfefed/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0013-roman-to-integer](https://github.com/terfefed/LeetCode/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/terfefed/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/terfefed/LeetCode/tree/master/0020-valid-parentheses) |
@@ -17,6 +18,7 @@ Solutions of daily leetcode questions!
 ## Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/terfefed/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [3143-longest-unequal-adjacent-groups-subsequence-i](https://github.com/terfefed/LeetCode/tree/master/3143-longest-unequal-adjacent-groups-subsequence-i) |
 ## Greedy
 |  |
@@ -75,4 +77,8 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/terfefed/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+## Two Pointers
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/terfefed/LeetCode/tree/master/0005-longest-palindromic-substring) |
 <!---LeetCode Topics End-->
