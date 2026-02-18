@@ -34,6 +34,7 @@ Solutions of daily leetcode questions!
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/terfefed/LeetCode/tree/master/0002-add-two-numbers) |
+| [0007-reverse-integer](https://github.com/terfefed/LeetCode/tree/master/0007-reverse-integer) |
 | [0013-roman-to-integer](https://github.com/terfefed/LeetCode/tree/master/0013-roman-to-integer) |
 | [3172-divisible-and-non-divisible-sums-difference](https://github.com/terfefed/LeetCode/tree/master/3172-divisible-and-non-divisible-sums-difference) |
 ## Trie
